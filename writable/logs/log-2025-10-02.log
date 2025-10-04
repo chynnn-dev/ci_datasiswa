@@ -1,0 +1,168 @@
+ERROR - 2025-10-02 01:05:09 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', '', 'db_datasiswa', 3306, '', 0)
+#1 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\BaseModel.php(1277): CodeIgniter\Model->countAllResults(false)
+#6 C:\laragon\www\240302061_uts arum\app\Controllers\Sekolah.php(27): CodeIgniter\BaseModel->paginate(2, 'sekolah')
+#7 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Sekolah->index()
+#8 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sekolah))
+#9 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\240302061_uts arum\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\BaseModel.php(1277): CodeIgniter\Model->countAllResults(false)
+#5 C:\laragon\www\240302061_uts arum\app\Controllers\Sekolah.php(27): CodeIgniter\BaseModel->paginate(2, 'sekolah')
+#6 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Sekolah->index()
+#7 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sekolah))
+#8 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\240302061_uts arum\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2025-10-02 01:05:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: sekolah]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `sekolah`', [], false)
+ 3 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1277): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Controllers\Sekolah.php(27): CodeIgniter\BaseModel->paginate(2, 'sekolah')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Sekolah->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sekolah))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\240302061_uts arum\\public\\index.php')
+ERROR - 2025-10-02 01:05:22 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', '', 'db_datasiswa', 3306, '', 0)
+#1 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\BaseModel.php(1277): CodeIgniter\Model->countAllResults(false)
+#6 C:\laragon\www\240302061_uts arum\app\Controllers\Sekolah.php(27): CodeIgniter\BaseModel->paginate(2, 'sekolah')
+#7 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Sekolah->index()
+#8 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sekolah))
+#9 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\240302061_uts arum\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\BaseModel.php(1277): CodeIgniter\Model->countAllResults(false)
+#5 C:\laragon\www\240302061_uts arum\app\Controllers\Sekolah.php(27): CodeIgniter\BaseModel->paginate(2, 'sekolah')
+#6 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Sekolah->index()
+#7 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sekolah))
+#8 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\240302061_uts arum\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2025-10-02 01:05:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: sekolah]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `sekolah`', [], false)
+ 3 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1277): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Controllers\Sekolah.php(27): CodeIgniter\BaseModel->paginate(2, 'sekolah')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Sekolah->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sekolah))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\240302061_uts arum\\public\\index.php')
+ERROR - 2025-10-02 01:05:30 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', '', 'db_datasiswa', 3306, '', 0)
+#1 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\BaseModel.php(1277): CodeIgniter\Model->countAllResults(false)
+#6 C:\laragon\www\240302061_uts arum\app\Controllers\Sekolah.php(27): CodeIgniter\BaseModel->paginate(2, 'sekolah')
+#7 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Sekolah->index()
+#8 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sekolah))
+#9 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\240302061_uts arum\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\BaseModel.php(1277): CodeIgniter\Model->countAllResults(false)
+#5 C:\laragon\www\240302061_uts arum\app\Controllers\Sekolah.php(27): CodeIgniter\BaseModel->paginate(2, 'sekolah')
+#6 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Sekolah->index()
+#7 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sekolah))
+#8 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\240302061_uts arum\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\240302061_uts arum\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2025-10-02 01:05:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: sekolah]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `sekolah`', [], false)
+ 3 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1277): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Controllers\Sekolah.php(27): CodeIgniter\BaseModel->paginate(2, 'sekolah')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Sekolah->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sekolah))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\240302061_uts arum\\public\\index.php')
+DEBUG - 2025-10-02 01:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-02 01:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-02 01:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-02 01:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-02 01:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-02 01:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-02 01:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-02 01:14:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-02 01:14:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-02 01:14:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-02 01:14:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-02 01:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-02 01:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-02 01:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-02 15:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
